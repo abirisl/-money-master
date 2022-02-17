@@ -26,11 +26,15 @@ document.getElementById('btn').addEventListener('click', function totalBalanceVa
     const totalCostAmount=parseFloat(foodCost) + parseFloat(rentCost) + parseFloat(colthCost);
     const incomeInput= inputBtn('income')
     const totalBalance= parseFloat(incomeInput) - totalCostAmount;
-    const errorMessage= document.getElementById('error-msg')
+    
     if(totalCostAmount>0 ){
-        totalAmount('expens',totalCostAmount);   
+        totalAmount('expens',totalCostAmount); 
+        if(totalBalance>0){
+            totalAmount('balance', totalBalance);
+        }  
         
     }
+    const errorMessage= document.getElementById('error-msg')
     if(totalBalance>0){
         errorMessage.style.display='none'
        
@@ -50,15 +54,16 @@ document.getElementById('save-btn').addEventListener('click', function(){
     const saveInput= inputBtn('save');
     const saveTotal= parseFloat(incomeInput) * parseFloat(saveInput) / 100;
 
-    if(saveTotal>0){
-        
+
     totalAmount('save',saveTotal);
-    }
 
 
     const balanceTotal= document.getElementById('balance-total').innerText;
     const saveTotalAmount= document.getElementById('save-total').innerText;
-    let remainingTotal= balanceTotal-saveTotalAmount;
-    totalAmount('remaining', remainingTotal);
+    let remainingTotal=  balanceTotal - saveTotalAmount;
+   
+    if(remainingTotal>0){
+        totalAmount('remaining', remainingTotal);
+    }
    
 })
