@@ -10,73 +10,15 @@
 </head>
 <body>
     <header>
-        <h1 class="text-8xl text-center font-bold mt-10 text-info">Accounts of Money</h1>
+        <h1 class="text-6xl text-center font-bold mt-10 text-info">Accounts of Money</h1>
     </header>
-    <main class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col-lg-6 col-md-12 border border-4 shadow p-3">
-                <img src="images/Money0.jpg" alt="">
-            </div>
-            <div class="col-lg-6 col-md-12 border border-4 shadow p-3 mt-5">
-                <div class="d-flex justify-content-center mt-3 fs-5 fw-bold">
-                    <h2>income</h2>
+    <main >
+        <section class="container">
+            <div class="row d-flex align-items-center p-2">
+                <div class="col-lg-6 col-md-12 col-sm-12 border border-4 shadow p-3 mt-5">
+                    <img src="images/Money0.jpg" alt="">
                 </div>
-                <div class="d-flex justify-content-center mt-3">
-                    <p>income:</p>
-                    <input id="income-input" class="border border-2" type="text">
-                </div>
-                <div class="d-flex justify-content-center mt-3 fs-5 fw-bold">
-                    <h2>Expenses</h2>
-                </div>
-                <div class="d-flex justify-content-center mt-3 ms-3">
-                    <p>Food :</p>
-                    <input id="food-input" class="border border-2 " type="text">
-                </div>
-                <div class="d-flex justify-content-center mt-2 ms-4">
-                    <p>Rent :</p>
-                    <input id="rent-input" class="border border-2" type="text">
-                </div>
-                <div class="d-flex justify-content-center mt-2 ms-1">
-                    <p>Clothes :</p>
-                    <input id="cloth-input" class="border border-2" type="text">
-                </div>
-                <div class="d-flex justify-content-center mt-3">
-                    <button id="btn" class="btn btn-lg btn-primary">Calculate</button>
-                </div>
-                <div class="d-flex justify-content-center mt-3 fs-3 font-bold">
-                    <h1>Total Expenses : <span id="expens-total">0</span></h1>
-                </div>
-                <div id="error-input" class="  mt-3 border border-4 shadow p-auto w-50 ms-auto me-auto" style="display: none;">
-                    <h4 class="p-auto f-6 fw-bold"><span id="cross" class="bg-dark text-danger rounded p-1  w-auto fw-bold h-25">x</span>Please input positive number</h4>
-                </div>
-                <div class="d-flex justify-content-center mt-3 fs-3 font-bold">
-                    <h1>Balance :  <span id="balance-total">0</span></h1>
-                </div>
-                <div id="error-msg" class="  mt-3 border border-4 shadow p-auto w-50 ms-auto me-auto" style="display: none;">
-                    <h4 class="p-auto f-6 fw-bold"><span id="cross" class="bg-dark text-danger rounded p-1  w-auto fw-bold h-25">x</span>sorry your costs to high</h4>
-                </div>
-                <div class="d-flex justify-content-center mt-5">
-                    <p>Save :</p>
-                    <input id="save-input" class="border border-3 me-3 w-25" type="text">
-                    <p class="fs-3">%</p>
-                    <button id="save-btn" class="btn btn-secondary btn-lg ms-3">save</button>
-                </div>
-                <div class="d-flex justify-content-center mt-3 fs-3 fw-bold">
-                    <h1>Saving Amount : <span id="save-total">0</span></h1>
-                </div>
-                <div class="d-flex justify-content-center mt-3 fs-3 fw-bold">
-                    <h1>Remaining Balance : <span id="remaining-total">0</span></h1>
-                </div>
-            </div>
-        </div>
-        <!-- <section>
-            <div class="row">
-                
-                    <div class="col-lg-6 col-md-12 mt-5 border border-4 shadow p-3  ms-5">
-                        <img src="images/Money0.jpg" alt="">
-                    </div>
-                
-                <div class=" col-lg-6 col-md-12 mt-5 border border-4 shadow p-3 mb-5 bg-body rounded me-5">
+                <div class="col-lg-6 col-md-12 col-sm-12 border border-4 shadow p-3 mt-5">
                     <div class="d-flex justify-content-center mt-3 fs-5 fw-bold">
                         <h2>income</h2>
                     </div>
@@ -105,11 +47,14 @@
                     <div class="d-flex justify-content-center mt-3 fs-3 font-bold">
                         <h1>Total Expenses : <span id="expens-total">0</span></h1>
                     </div>
+                    <div id="error-input" class="  mt-3 border border-4 shadow p-auto w-50 ms-auto me-auto" style="display: none;">
+                        <h4 class="p-auto f-6 fw-bold"><span id="cross" class="bg-dark text-danger rounded p-1  w-auto fw-bold h-25">x</span>Please input positive number</h4>
+                    </div>
                     <div class="d-flex justify-content-center mt-3 fs-3 font-bold">
                         <h1>Balance :  <span id="balance-total">0</span></h1>
                     </div>
                     <div id="error-msg" class="  mt-3 border border-4 shadow p-auto w-50 ms-auto me-auto" style="display: none;">
-                        <h4 class="p-auto f-6 fw-bold"><span id="cross" class="bg-dark text-danger rounded p-1  w-auto fw-bold h-25">x</span> sorry your balance is over</h4>
+                        <h4 class="p-auto f-6 fw-bold"><span id="cross" class="bg-dark text-danger rounded p-1  w-auto fw-bold h-25">x</span>sorry your costs to high</h4>
                     </div>
                     <div class="d-flex justify-content-center mt-5">
                         <p>Save :</p>
@@ -125,7 +70,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
     </main>
 
     <script src="./js/Money.js"></script>
