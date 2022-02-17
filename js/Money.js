@@ -3,7 +3,17 @@
 function inputBtn(total){
     const totalCost= document.getElementById(total +'-input');
     const totalValue= totalCost.value;
-    return totalValue;
+    const errorMessage= document.getElementById('error-input')
+    if(totalValue>0){
+        errorMessage.style.display='none';
+        return totalValue;
+       
+    }
+    else {
+        errorMessage.style.display='block';
+        return inputBtn();
+    }
+    
 }
 // total Amount item
 
@@ -24,25 +34,18 @@ document.getElementById('btn').addEventListener('click', function totalBalanceVa
     const rentCost= inputBtn('rent');
     const colthCost= inputBtn('cloth');
     const totalCostAmount=parseFloat(foodCost) + parseFloat(rentCost) + parseFloat(colthCost);
+     totalAmount('expens',totalCostAmount);
     const incomeInput= inputBtn('income')
     const totalBalance= parseFloat(incomeInput) - totalCostAmount;
-    
-    if(totalCostAmount>0 ){
-        totalAmount('expens',totalCostAmount); 
-        if(totalBalance>0){
-            totalAmount('balance', totalBalance);
-        }  
-        
-    }
-    const errorMessage= document.getElementById('error-msg')
-    if(totalBalance>0){
-        errorMessage.style.display='none'
-       
+    totalAmount('balance', totalBalance); 
+    const errorMessage= document.getElementById('error-msg');
+    if(totalCostAmount>totalBalance){
+        errorMessage.style.display='block';    
     }
     else{
-        errorMessage.style.display='block'
+        errorMessage.style.display='none';
+
     }
-    
    
 })
 
@@ -57,10 +60,9 @@ document.getElementById('save-btn').addEventListener('click', function(){
 
     totalAmount('save',saveTotal);
 
-
-    const balanceTotal= document.getElementById('balance-total').innerText;
+    const totalBalance= document.getElementById('balance-total').innerText;
     const saveTotalAmount= document.getElementById('save-total').innerText;
-    let remainingTotal=  balanceTotal - saveTotalAmount;
+    let remainingTotal=  totalBalance - saveTotalAmount;
    
     if(remainingTotal>0){
         totalAmount('remaining', remainingTotal);
